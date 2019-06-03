@@ -21,6 +21,7 @@ typedef struct {
   Int_t id;          // ID of mCP (11: e, 13: mu)
   Double_t pT;       // pT of mCP
   Double_t eta;      // eta (pseudorapidity) of mCP
+  Double_t phi;      // phi of mCP
   Double_t pTHat;    // event's pTHat
   Double_t weight;   // event's weight (normally 1)
   Double_t charge;   // mCP's charge
@@ -401,6 +402,7 @@ int main(int argc, char **argv) {
   t1.Branch("id", &cpevent.id, "id/I");
   t1.Branch("pT", &cpevent.pT, "pT/D");
   t1.Branch("eta", &cpevent.eta, "eta/D");
+  t1.Branch("phi", &cpevent.phi, "phi/D");
   t1.Branch("pTHat", &cpevent.pTHat, "pTHat/D");
   t1.Branch("weight", &cpevent.weight, "weight/D");
   t1.Branch("charge", &cpevent.charge, "charge/D");
@@ -550,6 +552,7 @@ int main(int argc, char **argv) {
       cpevent.id = pythia.event[m].id();
       cpevent.pT = pythia.event[m].pT();
       cpevent.eta = pythia.event[m].eta();
+      cpevent.phi = pythia.event[m].phi();
       cpevent.pTHat = pythia.info.pTHat();
       cpevent.weight = pythia.info.weight();
       cpevent.charge = pythia.event[m].charge();

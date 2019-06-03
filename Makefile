@@ -1,9 +1,7 @@
 SHELL=/usr/bin/env bash
 
-PREFIX_LIB=/home/data/mg5213/Documents/Research/milliQan/pythia8240/lib
-PREFIX_INCLUDE=/home/data/mg5213/Documents/Research/milliQan/pythia8240/include
-#PREFIX_LIB=/Users/gregory/Documents/classes/nyu/2018_summer/pythia/pythia8235/lib
-#PREFIX_INCLUDE=/Users/gregory/Documents/classes/nyu/2018_summer/pythia/pythia8235/include
+PREFIX_LIB=/Users/fgolf/sw/pythia/pythia8240/lib
+PREFIX_INCLUDE=/Users/fgolf/sw/pythia/pythia8240/include
 
 ROOT_INCLUDE=$(shell root-config --incdir)
 
